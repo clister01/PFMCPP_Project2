@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -64,10 +64,28 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
-
-    
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    
+    int numberOfLegs = 2;
+    int numberOfArms = 2;
+    int numberOfEyes = 2;
+    float heightInCentimeters = 177.8f;
+    float weightInKilograms = 95.2f;
+    float pencilLengthInCentimeters = 19.5f;
+    bool isMale = true;
+    bool isFemale = false;
+    bool isRaining = false;
+    double pi = 3.14159265358979323846;
+    double longitude = 12.492507;
+    double latitude = 41.890251;
+    char firstInitial = 'C';
+    char lastInitial = 'L';
+    char middleInitial = 'A';
+    unsigned int numberOfOranges = 10;
+    unsigned int houseNumber = 3325;
+    unsigned int numberOfParkedCars = 15;
+
+    ignoreUnused(numberOfLegs, numberOfArms, numberOfEyes, heightInCentimeters, weightInKilograms, pencilLengthInCentimeters, isMale, isFemale, isRaining, pi, longitude, latitude, firstInitial, lastInitial, middleInitial, numberOfOranges, houseNumber, numberOfParkedCars);
 }
 
 /*
@@ -84,43 +102,77 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int countGuavas(int numberOfGuavasOnGround, int numberOfGuavasInTree = 0)
+{
+    ignoreUnused(numberOfGuavasOnGround, numberOfGuavasInTree);
+    return {};
+}
 /*
  2)
  */
-
+float squareFootageOfHouse(float lengthOfHouse, float widthOfHouse = 50.5f)
+{
+    ignoreUnused(lengthOfHouse, widthOfHouse);
+    return {};
+}
 /*
  3)
  */
-
+bool isItSunnyOutside(bool isDaytime, bool isCloudy = false)
+{
+    ignoreUnused(isDaytime, isCloudy);
+    return {};
+}
 /*
  4)
  */
-
+void goForARun(int distanceInMeters, int timeInMinutes, bool areShoesOn = true)
+{
+    ignoreUnused(distanceInMeters, timeInMinutes, areShoesOn);
+}
 /*
  5)
  */
-
+void makeASandwich(int numberOfSlicesOfBread, int numberOfSlicesOfCheese = 2, int numberOfSlicesOfHam = 2, bool isToasted = true)
+{
+    ignoreUnused(numberOfSlicesOfBread, numberOfSlicesOfCheese, numberOfSlicesOfHam, isToasted);
+}
 /*
  6)
  */
-
+void makeTheBed(int numberOfPillows, int numberOfSheets = 3)
+{
+    ignoreUnused(numberOfPillows, numberOfSheets);
+}
 /*
  7)
  */
-
+bool makeCoffee(int numberOfCoffeeBeans, int numberOfCupsOfWater = 1, int numberOfSpoonsOfSugar = 1, bool doYouWantCoffee = true)
+{
+    ignoreUnused(numberOfCoffeeBeans, numberOfCupsOfWater, numberOfSpoonsOfSugar, doYouWantCoffee);
+    return {};
+}
 /*
  8)
  */
-
+void doLaundry (int numberOfClothes = 10, float amountOfDetergent = 1.5f, bool isMachineEmpty = true)
+{
+    ignoreUnused(numberOfClothes, amountOfDetergent, isMachineEmpty);
+}
 /*
  9)
  */
-
+void pickUpTheKids(int numberOfKids = 2, int numberOfBags = 2, bool isTheSchoolDayOver = true)
+{
+    ignoreUnused(numberOfKids, numberOfBags, isTheSchoolDayOver);
+}
 /*
  10)
  */
-
+void putOnABandage(int numberOfBandageStrips = 1, bool isTheBandageClean = true)
+{
+    ignoreUnused(numberOfBandageStrips, isTheBandageClean);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -139,29 +191,42 @@ int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
+    ignoreUnused(carRented);
     
     //1)
+    auto totalGuavas = countGuavas(100, 10);
+    ignoreUnused(totalGuavas);
     
     //2)
+    auto houseSquareFootage = squareFootageOfHouse(100.5f, 50.5f);
+    ignoreUnused(houseSquareFootage);
     
     //3)
+    auto isItSunny = isItSunnyOutside(true, false);
+    ignoreUnused(isItSunny);
     
     //4)
+    goForARun(1000, 15, true);
     
     //5)
+    makeASandwich(2, 2, 2, true);
     
     //6)
+    makeTheBed(2,3);
     
     //7)
+    auto coffeeMade = makeCoffee(100, 1, 1, true);
+    ignoreUnused(coffeeMade);
     
     //8)
+    doLaundry(10, 1.5f, true);
     
     //9)
+    pickUpTheKids(2, 2, true);
     
     //10)
+    putOnABandage(1, true);
     
-    
-    ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
