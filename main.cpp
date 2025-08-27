@@ -191,41 +191,47 @@ int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
-    ignoreUnused(carRented);
+    ignoreUnused(rentACar);
     
     //1)
     auto totalGuavas = countGuavas(100, 10);
-    ignoreUnused(totalGuavas);
+    ignoreUnused(countGuavas);
     
     //2)
     auto houseSquareFootage = squareFootageOfHouse(100.5f, 50.5f);
-    ignoreUnused(houseSquareFootage);
+    ignoreUnused(squareFootageOfHouse);
     
     //3)
     auto isItSunny = isItSunnyOutside(true, false);
-    ignoreUnused(isItSunny);
+    ignoreUnused(isItSunnyOutside);
     
     //4)
     goForARun(1000, 15, true);
+    ignoreUnused(goForARun);
     
     //5)
     makeASandwich(2, 2, 2, true);
+    ignoreUnused(makeASandwich);
     
     //6)
     makeTheBed(2,3);
+    ignoreUnused(makeTheBed);
     
     //7)
     auto coffeeMade = makeCoffee(100, 1, 1, true);
-    ignoreUnused(coffeeMade);
+    ignoreUnused(makeCoffee);
     
     //8)
     doLaundry(10, 1.5f, true);
+    ignoreUnused(doLaundry);
     
     //9)
     pickUpTheKids(2, 2, true);
+    ignoreUnused(pickUpTheKids);
     
     //10)
     putOnABandage(1, true);
+    ignoreUnused(putOnABandage);
     
     std::cout << "good to go!" << std::endl;
     return 0;    
