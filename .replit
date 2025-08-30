@@ -8,3 +8,6 @@ run = ["sh", "-c", "clang++ -std=c++17 -Weverything -Wno-c++98-compat -Wno-missi
 
 [nix]
 channel = "stable-25_05"
+
+[agent]
+expertMode = true
